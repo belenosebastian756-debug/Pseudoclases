@@ -1,0 +1,31 @@
+:root{--bg:#f2f5f3;--ink:#14213d;--blue:#2a6f97;--sun:#ffd23f;--red:#e63946;--line:#c9d3cf}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Segoe UI",system-ui,sans-serif}
+.top,.wrap{max-width:68rem;margin:0 auto;padding:0 1.25rem}
+.top{padding-top:2.5rem;padding-bottom:1rem}
+h1{font:700 clamp(2rem,5vw,3rem)/1.1 Georgia,serif;margin:0 0 .5rem}
+.top p{max-width:60ch;margin:0}
+.wrap{display:grid;grid-template-columns:13rem 1fr;gap:2rem;padding-bottom:4rem}
+nav{position:sticky;top:1rem;align-self:start;display:flex;flex-direction:column;gap:.25rem;padding-top:1rem}
+nav a{color:var(--ink);text-decoration:none;padding:.35rem .6rem;border-left:4px solid var(--line)}
+nav a:hover{border-color:var(--blue);background:#fff}
+h2{font:700 1.6rem Georgia,serif;margin:2.5rem 0 1rem;padding-bottom:.4rem;border-bottom:3px solid var(--ink)}
+article{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;padding:1.25rem 0;border-bottom:1px solid var(--line)}
+h3{margin:0}
+h3 code{font:700 1.5rem ui-monospace,Consolas,monospace;color:var(--blue)}
+article p{margin:.3rem 0 .6rem;max-width:60ch}
+pre{margin:0;padding:.8rem 1rem;background:var(--ink);color:#f2f5f3;border-radius:6px;overflow-x:auto;font:.9rem/1.5 ui-monospace,Consolas,monospace}
+.demo{align-self:start;background:#fff;border:2px solid var(--ink);border-radius:6px;padding:1rem}
+.demo input,.demo button{font:inherit;padding:.4rem .6rem;border:2px solid var(--line);border-radius:4px;margin:.2rem}
+.demo button{background:#fff;cursor:pointer}
+.demo ul{margin:0;padding-left:1.2rem}
+.demo .e,.demo .f,.demo .c,.demo .b,.demo .fs{border:2px dashed var(--line);padding:.5rem;margin:.3rem 0}
+.demo label{display:block}
+.demo .nodemo{margin:0;color:#5b6577;font-style:italic}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+@media(max-width:800px){
+  .wrap{grid-template-columns:1fr;gap:0}
+  nav{position:static;flex-direction:row;overflow-x:auto;padding-bottom:.5rem}
+  nav a{white-space:nowrap}
+  article{grid-template-columns:1fr}
+}
